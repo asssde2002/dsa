@@ -1,4 +1,5 @@
 def prime_algo(nodes, edges):
+    # TC: O(V**2), SC: O(V+E)
     node_edges = {i: [] for i in range(nodes)}
     for cost, v, u in edges:
         node_edges[v].append((cost, u))
