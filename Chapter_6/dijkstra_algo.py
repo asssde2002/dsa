@@ -1,6 +1,7 @@
 from typing import List
 
 # cannot have negative cost
+# can have cycle
 def dijkstra_algo(nodes: int, edges: List[List[int]], source: int):
     # TC: O(V**2), SC: O(V+E))
     node_edges = {i: [] for i in range(nodes)}
@@ -41,5 +42,6 @@ if __name__ == "__main__":
     distance = dijkstra_algo(nodes, edges, source)
     # [3350, 3250, 2450, 1250, 0, 250, 1150, 1650]
     print(distance)
+
 
 
