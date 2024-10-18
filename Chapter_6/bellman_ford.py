@@ -3,7 +3,7 @@ from typing import List, Tuple
 # cannot have negative cycle
 # can have negative cost
 def bellman_ford(nodes: int, edges: List[Tuple[int, int, int]], source: int):
-    # TC: O(V*E), SC: O(V+E)
+    # TC: O(V*E), SC: O(V)
     distance = [float("inf")] * nodes
     distance[source] = 0
     # relaxing
