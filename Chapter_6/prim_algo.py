@@ -5,12 +5,10 @@ def prim_algo(nodes, edges):
         node_edges[v].append((cost, u))
         node_edges[u].append((cost, v))
     
-    collect_nodes = 1
+    collect_nodes = 0
     dp = [float("inf")] * nodes
     visited = [False] * nodes
-    visited[0] = True
-    for cost, u in node_edges[0]:
-        dp[u] = min(dp[u], cost)
+    dp[0] = 0
 
     ans = 0
     while collect_nodes != nodes:
