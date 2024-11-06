@@ -1,7 +1,7 @@
 from functools import reduce
 
 
-def bucket_sort(array):
+def radix_sort(array):
     # TC: O(n), SC: O(n), stable
     times = len(str(max(array)))
     for t in range(times):
@@ -17,6 +17,6 @@ def bucket_sort(array):
 
 if __name__ == "__main__":
     array = [30, 26, 1, 3, 2, 235, 100]
-    print(f"Before bucket sort array: {array}")
-    array = bucket_sort(array)
-    print(f"After bucket sort array: {array}")
+    print(f"Before radix sort array: {array}")
+    array = radix_sort(array)
+    print(f"After radix sort array: {array}")
