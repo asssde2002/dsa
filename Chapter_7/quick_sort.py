@@ -9,18 +9,23 @@ def quick_sort(array, start, end):
 
 def partition(array, start, end):
     pivot_key = array[end]
-    i = start - 1
+    i = start
     for j in range(start, end):
         if array[j] <= pivot_key:
-            i += 1
             array[i], array[j] = array[j], array[i]
+            i += 1
 
-    array[i+1], array[end] = array[end], array[i+1]
-    return i+1
+    array[i], array[end] = array[end], array[i]
+    return i
 
 
 if __name__ == "__main__":
     array = [30, 26, 1, 3, 2]
+    print(f"Before quick sort array: {array}")
+    quick_sort(array, 0, len(array)-1)
+    print(f"After quick sort array: {array}")
+
+    array = [-5, -2, 3, 26, 30]
     print(f"Before quick sort array: {array}")
     quick_sort(array, 0, len(array)-1)
     print(f"After quick sort array: {array}")
