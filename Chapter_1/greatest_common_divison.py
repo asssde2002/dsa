@@ -8,17 +8,10 @@ def cal_gcd_recursive(a: int, b: int) -> int:
 
 def cal_gcd_iterative(a: int, b: int) -> int:
     # 輾轉相除法
-    while a != 0 and b != 0:
-        if a > b:
-            a = a % b
-        else:
-            b = b % a
+    while b != 0:
+        a, b = b, a % b
 
-    if a == 0:
-        return b
-    else:
-        return a
-
+    return a
 
 if __name__ == "__main__":
     a, b = map(int, input().split())
